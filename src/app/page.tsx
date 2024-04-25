@@ -9,7 +9,7 @@ import {
   BsArrowUpRight,
   BsArrowDownRight,
   BsHouse,
-  BsCamera
+  BsCamera,
 } from "react-icons/bs";
 import { SiTesla } from "react-icons/si";
 import {
@@ -128,84 +128,82 @@ let goals = [
   },
 ];
 
-export const Transactions = React.memo(
-  ({ transactions }: { transactions?: any }) => {
-    const handleIcon = (serviceType: string) => {
-      switch (serviceType) {
-        case "transfer":
-          return (
-            <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
-              <BsArrowLeftRight className="text-typo-400" />
-            </div>
-          );
-        case "uber":
-          return (
-            <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
-              <BsCarFront className="text-typo-400" />
-            </div>
-          );
-        case "supermarket":
-          return (
-            <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
-              <BsBag className="text-typo-400" />
-            </div>
-          );
-        case "reward":
-          return (
-            <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
-              <BsDatabase className="text-typo-400" />
-            </div>
-          );
+const Transactions = ({ transactions }: { transactions?: any }) => {
+  const handleIcon = (serviceType: string) => {
+    switch (serviceType) {
+      case "transfer":
+        return (
+          <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
+            <BsArrowLeftRight className="text-typo-400" />
+          </div>
+        );
+      case "uber":
+        return (
+          <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
+            <BsCarFront className="text-typo-400" />
+          </div>
+        );
+      case "supermarket":
+        return (
+          <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
+            <BsBag className="text-typo-400" />
+          </div>
+        );
+      case "reward":
+        return (
+          <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
+            <BsDatabase className="text-typo-400" />
+          </div>
+        );
 
-        default:
-          return (
-            <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
-              <BsArrowLeftRight className="text-typo-400" />
-            </div>
-          );
-      }
-    };
+      default:
+        return (
+          <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
+            <BsArrowLeftRight className="text-typo-400" />
+          </div>
+        );
+    }
+  };
 
-    const transactionList = useMemo(
-      () =>
-        transactions.map((item: any, index: number) => (
-          <li
-            key={index}
-            className="cursor-pointer border-b border-border last:border-b-0 pb-2 mt-2"
-          >
-            <div className="flex flex-row items-center justify-between">
-              <div className="flex flex-row items-center space-x-2">
-                {handleIcon(item.serviceType)}
-                <div className="flex flex-col">
-                  <span className="text-typo">{item.name}</span>
-                  <span className="text-typo-400 text-sm">
-                    {item.desc || "-"}
-                  </span>
-                </div>
-              </div>
-              <div className="flex flex-col items-end">
-                <span
-                  className={`${
-                    item.income ? "text-typo-600" : "text-typo-700"
-                  } text-sm`}
-                >
-                  {item.income ? "+" : "-"}${moneyFormat(item.amount)}
-                </span>
+  const transactionList = useMemo(
+    () =>
+      transactions.map((item: any, index: number) => (
+        <li
+          key={index}
+          className="cursor-pointer border-b border-border last:border-b-0 pb-2 mt-2"
+        >
+          <div className="flex flex-row items-center justify-between">
+            <div className="flex flex-row items-center space-x-2">
+              {handleIcon(item.serviceType)}
+              <div className="flex flex-col">
+                <span className="text-typo">{item.name}</span>
                 <span className="text-typo-400 text-sm">
-                  {item.cardType || "-"}
+                  {item.desc || "-"}
                 </span>
               </div>
             </div>
-          </li>
-        )),
-      [transactions]
-    );
+            <div className="flex flex-col items-end">
+              <span
+                className={`${
+                  item.income ? "text-typo-600" : "text-typo-700"
+                } text-sm`}
+              >
+                {item.income ? "+" : "-"}${moneyFormat(item.amount)}
+              </span>
+              <span className="text-typo-400 text-sm">
+                {item.cardType || "-"}
+              </span>
+            </div>
+          </div>
+        </li>
+      )),
+    [transactions]
+  );
 
-    return <ul>{transactionList}</ul>;
-  }
-);
+  return <ul>{transactionList}</ul>;
+};
 
-export const Investment = React.memo(() => {
+const Investment = () => {
   const handleIcon = (code: string) => {
     switch (code) {
       case "apple":
@@ -291,9 +289,9 @@ export const Investment = React.memo(() => {
       ))}
     </ul>
   );
-});
+};
 
-export const QuickTransfer = React.memo(() => {
+const QuickTransfer = () => {
   const handleIcon = (name: string) => {
     return (
       <div className="flex flex-row items-center justify-center w-[30px] h-[30px] rounded-[30px] bg-active-gradient p-2">
@@ -327,9 +325,9 @@ export const QuickTransfer = React.memo(() => {
       ))}
     </ul>
   );
-});
+};
 
-export const Goals = React.memo(() => {
+const Goals = () => {
   const handleIcon = (code: string) => {
     switch (code) {
       case "trip":
@@ -374,15 +372,13 @@ export const Goals = React.memo(() => {
                 <span className="text-typo">{item.name}</span>
               </div>
             </div>
-            <div className="flex flex-col items-end">
-              
-            </div>
+            <div className="flex flex-col items-end"></div>
           </div>
         </li>
       ))}
     </ul>
   );
-});
+};
 
 export default function Home() {
   return (
@@ -563,7 +559,7 @@ export default function Home() {
                   <span className="text-typo-500 text-sm">add goal +</span>
                 </div>
               </div>
-              <Goals/>
+              <Goals />
             </div>
           </div>
         </div>
