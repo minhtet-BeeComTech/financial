@@ -23,7 +23,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: var(--color-primary);
+  background: var(--color-background);
 }
 
 @layer utilities {

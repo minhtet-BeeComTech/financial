@@ -1,5 +1,5 @@
 html[data-theme="dark"] {
-  --color-primary: #18191a;
+  --color-primary: #55459E;
   --color-primary-50: #333333;
   --color-primary-100: #4d4d4d;
   --color-primary-200: #666666;
@@ -42,8 +42,8 @@ html[data-theme="dark"] {
   --color-typo-300: #ffffff;
   --color-typo-400: #ffffff;
   --color-typo-500: #e4e6eb;
-  --color-typo-600: #c7cbd1;
-  --color-typo-700: #afb8bf;
+  --color-typo-600: #58C6FF;
+  --color-typo-700: #EE4075;
   --color-typo-800: #97a0a8;
   --color-typo-900: #7a838d;
 
@@ -60,6 +60,10 @@ html[data-theme="dark"] {
   --color-card-900: #ffffff;
 
   --color-sidebar: #2C2351;
+  --color-background: #392C6A;
+
+  --color-gradient: #3D4A7C;
+  --color-gradient-50: #7E49A8;
 
   --color-border: #383838;
 }
