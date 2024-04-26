@@ -167,25 +167,29 @@ export const SideBarCom = () => {
           );
         })}
       </nav>
-      <div
-        className="cursor-pointer py-[10px] px-[20px] pl-[45px] relative"
-        onClick={() => handleTheme(theme === "dark" ? "light" : "dark")}
-      >
-        <MdOutlineDarkMode
-          className={`text-typo text-[18px] transition-transform duration-500 ease-in-out absolute top-[12px] left-[20px] ${
-            theme === "dark"
-              ? "transform rotate-0 opacity-100"
-              : "opacity-0 rotate-90"
-          }`}
-        />
-        <MdOutlineLightMode
-          className={`text-typo text-[18px] transition-transform duration-500 ease-in-out absolute top-[12px] left-[20px] ${
-            theme === "light" ? "transform rotate-90 opacity-100" : "opacity-0"
-          }`}
-        />
-        <span className="text-typo">
-          Switch to {theme === "dark" ? "light" : "dark"}
-        </span>
+      <div className="absolute bottom-0 bg-sidebar z-10 w-[16%]">
+        <div
+          className="cursor-pointer py-[20px] px-[20px] pl-[45px] relative"
+          onClick={() => handleTheme(theme === "dark" ? "light" : "dark")}
+        >
+          <MdOutlineDarkMode
+            className={`text-typo text-[18px] transition-transform duration-500 ease-in-out absolute top-[22px] left-[20px] ${
+              theme === "dark"
+                ? "transform rotate-0 opacity-100"
+                : "opacity-0 rotate-90"
+            }`}
+          />
+          <MdOutlineLightMode
+            className={`text-typo text-[18px] transition-transform duration-500 ease-in-out absolute top-[22px] left-[20px] ${
+              theme === "light"
+                ? "transform rotate-90 opacity-100"
+                : "opacity-0"
+            }`}
+          />
+          <span className="text-typo">
+            Switch to {theme === "dark" ? "light" : "dark"}
+          </span>
+        </div>
       </div>
     </div>
   );
