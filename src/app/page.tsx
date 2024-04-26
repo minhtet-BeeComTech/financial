@@ -480,7 +480,7 @@ export default function Home() {
                   <div>
                     <span className="text-typo text-lg">Income</span>
                   </div>
-                  <div className="flex flex-row items-center gap-x-[1px] cursor-pointer">
+                  <div className="flex flex-row items-center gap-x-1 cursor-pointer">
                     <span className="text-typo-500 text-sm">this month</span>
                     <AiOutlineDown className="text-typo-500 text-[12px]" />
                   </div>
@@ -504,7 +504,7 @@ export default function Home() {
                   <div>
                     <span className="text-typo text-lg">Expenses</span>
                   </div>
-                  <div className="flex flex-row items-center gap-x-[1px] cursor-pointer">
+                  <div className="flex flex-row items-center gap-x-1 cursor-pointer">
                     <span className="text-typo-500 text-sm">this month</span>
                     <AiOutlineDown className="text-typo-500 text-[12px]" />
                   </div>
@@ -528,7 +528,7 @@ export default function Home() {
                   <div>
                     <span className="text-typo text-lg">Investment</span>
                   </div>
-                  <div className="flex flex-row items-center gap-x-[1px] cursor-pointer">
+                  <div className="flex flex-row items-center gap-x-1 cursor-pointer">
                     <span className="text-typo-500 text-sm">this month</span>
                     <AiOutlineDown className="text-typo-500 text-[12px]" />
                   </div>
@@ -549,13 +549,13 @@ export default function Home() {
                     <span className="text-typo text-lg">Revenue analysis</span>
                   </div>
                   <div className="flex flex-row items-center gap-x-4">
-                    <div className="flex flex-row items-center gap-x-2 cursor-pointer">
-                      <div className="w-2 h-2 rounded-full bg-[#7DB4FE]" />
+                    <div className="flex flex-row items-center gap-x-1 cursor-pointer">
+                      <div className="w-2 h-2 rounded-full bg-[#7DB4FE] mr-[1px]" />
                       <span className="text-typo-500 text-sm">2020</span>
                       <AiOutlineDown className="text-typo-500 text-[12px]" />
                     </div>
-                    <div className="flex flex-row items-center gap-x-2 cursor-pointer">
-                      <div className="w-2 h-2 rounded-full bg-[#F6A3C8]" />
+                    <div className="flex flex-row items-center gap-x-1 cursor-pointer">
+                      <div className="w-2 h-2 rounded-full bg-[#F6A3C8] mr-[1px]" />
                       <span className="text-typo-500 text-sm">2021</span>
                       <AiOutlineDown className="text-typo-500 text-[12px]" />
                     </div>
@@ -572,7 +572,7 @@ export default function Home() {
                       Financial analysis
                     </span>
                   </div>
-                  <div className="flex flex-row items-center gap-x-[1px] cursor-pointer">
+                  <div className="flex flex-row items-center gap-x-1 cursor-pointer">
                     <span className="text-typo-500 text-sm">this month</span>
                     <AiOutlineDown className="text-typo-500 text-[12px]" />
                   </div>
@@ -600,7 +600,7 @@ export default function Home() {
                   <div>
                     <span className="text-typo text-lg">Expenses</span>
                   </div>
-                  <div className="flex flex-row items-center gap-x-[1px] cursor-pointer">
+                  <div className="flex flex-row items-center gap-x-1 cursor-pointer">
                     <span className="text-typo-500 text-sm">last week</span>
                     <AiOutlineDown className="text-typo-500 text-[12px]" />
                   </div>
@@ -642,7 +642,7 @@ export default function Home() {
                   <div>
                     <span className="text-typo text-lg">Transactions</span>
                   </div>
-                  <div className="flex flex-row items-center gap-x-[1px] cursor-pointer">
+                  <div className="flex flex-row items-center gap-x-1 cursor-pointer">
                     <span className="text-typo-500 text-sm">today</span>
                     <AiOutlineDown className="text-typo-500 text-[12px]" />
                   </div>
@@ -656,7 +656,7 @@ export default function Home() {
                   <div>
                     <span className="text-typo text-lg">Investment</span>
                   </div>
-                  <div className="flex flex-row items-center gap-x-[1px] cursor-pointer">
+                  <div className="flex flex-row items-center gap-x-1 cursor-pointer">
                     <span className="text-typo-500 text-sm">today</span>
                     <AiOutlineDown className="text-typo-500 text-[12px]" />
                   </div>
