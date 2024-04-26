@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-export const useTheme = (props?: any) => {
+export const useHandleTheme = (props?: any) => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {

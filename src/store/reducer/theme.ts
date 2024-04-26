@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-import { baseApi, routes } from "../api";
+import { baseApi } from "../api";
 
 export interface ThemeState {}
 
@@ -12,8 +12,7 @@ export const themeApi = baseApi
     addTagTypes: ["Themes"],
   })
   .injectEndpoints({
-    endpoints: (builder: any) => ({
-    }),
+    endpoints: (builder: any) => ({}),
   });
 
 const themeSlice = createSlice({

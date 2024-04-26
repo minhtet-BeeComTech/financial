@@ -74,8 +74,9 @@ export const StackedAreaChartCom = () => {
               <stop offset="95%" stopColor="#F6A3C8" stopOpacity={0} />
             </linearGradient>
           </defs>
+          <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis dataKey="name" />
-          <YAxis />
+          <YAxis/>
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
           <Area

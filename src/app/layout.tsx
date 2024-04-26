@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
-import Script from "next/script";
 
-import { HeaderCom, SideBarCom } from "@/components";
 import { Providers } from "./provider";
 import "./globals.css";
 
@@ -20,29 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
-      <head>
-        <Script
-          src="https://unpkg.com/react/umd/react.production.min.js"
-          strategy="beforeInteractive"
-        />
-        <Script
-          src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
-          strategy="beforeInteractive"
-        />
-        <Script
-          src="https://unpkg.com/recharts/umd/Recharts.min.js"
-          strategy="beforeInteractive"
-        />
-      </head>
       <body className={jost.className}>
         <Providers>
-          <div className="flex h-screen">
-            <SideBarCom />
-            <div className="flex-1 flex flex-col">
-              <HeaderCom />
-              <main className="flex-1 overflow-y-auto p-4">{children}</main>
-            </div>
-          </div>
+          <main className="flex-1 overflow-y-auto p-4 px-4 lg:px-7 no-scrollbar">
+            {children}
+          </main>
         </Providers>
       </body>
     </html>

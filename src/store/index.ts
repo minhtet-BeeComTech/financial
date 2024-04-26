@@ -4,10 +4,11 @@ import { setupListeners } from "@reduxjs/toolkit/query";
 import { persistReducer, persistStore } from "redux-persist";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 
-import { themeReducer } from "./reducer";
+import { themeReducer, authReducer } from "./reducer";
 import { baseApi } from "./api";
 
 const reducers = combineReducers({
+  auth: authReducer.authSlice,
   theme: themeReducer.themeSlice,
   [baseApi.reducerPath]: baseApi.reducer,
 });

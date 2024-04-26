@@ -14,9 +14,7 @@ export const FieldContainer = ({
         <label className="block text-typo mb-1 relative" {...labelProps}>
           {label}{" "}
           {required && (
-            <span className="absolute top-[1px] text-typo text-[10px]">
-              *
-            </span>
+            <span className="absolute top-[1px] text-typo text-[10px]">*</span>
           )}
         </label>
       )}

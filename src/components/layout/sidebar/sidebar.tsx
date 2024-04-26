@@ -1,6 +1,8 @@
 "use client";
+import { useCallback } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 import {
   BsGrid,
   BsWallet,
@@ -13,10 +15,11 @@ import {
   BsArrowBarRight,
 } from "react-icons/bs";
 import { AiOutlineDollar } from "react-icons/ai";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
-import { useTheme } from "@/hook";
+import { useHandleTheme } from "@/hook";
 
-const sidebardata = [
+export const navData = [
   {
     title: "section one",
     data: [
@@ -83,15 +86,39 @@ const sidebardata = [
 
 export const SideBarCom = () => {
   const pathName = usePathname();
-  const { handleTheme, theme } = useTheme();
+  const router = useRouter();
+  const { handleTheme, theme } = useHandleTheme();
+
+  const handleRouteChange = useCallback(
+    (path: string) => {
+      router.push(path);
+    },
+    [router]
+  );
+
+  const handleLogOut = () => {};
 
   return (
     <div className="bg-sidebar h-screen overflow-y-auto w-1/6 hidden lg:block">
-      <div className="p-[20px] py-[24px]">
-        <h1 className="text-typo font-bold">Wallet</h1>
+      <div
+        onClick={() => handleRouteChange("/")}
+        className="flex flex-row items-center gap-x-2 p-[20px] cursor-pointer"
+      >
+        <div className="w-[47px] h-[47px] rounded-[47px] overflow-hidden">
+          <Image
+            src={require("../../../../public/googlewallet.png")}
+            className="w-full h-[47px] object-cover"
+            layout="responsive"
+            width={47}
+            height={47}
+            alt="Avatar"
+            priority
+          />
+        </div>
+        <h1 className="text-typo font-bold text-lg">Wallet</h1>
       </div>
-      <div>
-        {sidebardata.map((item, index) => {
+      <nav>
+        {navData.map((item, index) => {
           return (
             <ul
               key={index}
@@ -106,7 +133,10 @@ export const SideBarCom = () => {
                     }`}
                   >
                     {item.path === "/logout" ? (
-                      <div className="flex items-center gap-x-2 cursor-pointer py-[10px] px-[20px]">
+                      <div
+                        onClick={handleLogOut}
+                        className="flex items-center gap-x-2 cursor-pointer py-[10px] px-[20px]"
+                      >
                         <div>{item.icon}</div>
                         <span className="text-typo">{item.name}</span>
                       </div>
@@ -136,12 +166,26 @@ export const SideBarCom = () => {
             </ul>
           );
         })}
-      </div>
+      </nav>
       <div
-        className="cursor-pointer py-[10px] px-[20px]"
+        className="cursor-pointer py-[10px] px-[20px] pl-[45px] relative"
         onClick={() => handleTheme(theme === "dark" ? "light" : "dark")}
       >
-        <span className="text-typo">Switch to {theme === "dark" ? "light" : "dark"}</span>
+        <MdOutlineDarkMode
+          className={`text-typo text-[18px] transition-transform duration-500 ease-in-out absolute top-[12px] left-[20px] ${
+            theme === "dark"
+              ? "transform rotate-0 opacity-100"
+              : "opacity-0 rotate-90"
+          }`}
+        />
+        <MdOutlineLightMode
+          className={`text-typo text-[18px] transition-transform duration-500 ease-in-out absolute top-[12px] left-[20px] ${
+            theme === "light" ? "transform rotate-90 opacity-100" : "opacity-0"
+          }`}
+        />
+        <span className="text-typo">
+          Switch to {theme === "dark" ? "light" : "dark"}
+        </span>
       </div>
     </div>
   );

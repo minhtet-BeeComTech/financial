@@ -26,6 +26,32 @@ body {
   background: var(--color-background);
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.recharts-responsive-container {
+  .recharts-wrapper {
+    .recharts-surface {
+      .recharts-layer {
+        .recharts-cartesian-axis-ticks {
+          .recharts-layer {
+            .recharts-text {
+              fill: #999999;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

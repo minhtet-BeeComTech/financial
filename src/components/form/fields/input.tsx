@@ -27,7 +27,7 @@ export const InputCom: React.FC<InputComProps> = ({
           </div>
         )}
         <input
-          className={`w-full bg-primary rounded-[8px] h-[33px] text-[#333] placeholder-[#333] py-[6px] focus:outline-none focus:border-[#ccc] border border-border placeholder:text-[#ccc] ${
+          className={`w-full bg-primary rounded-[8px] h-[33px] text-typo placeholder-[#333] py-[6px] focus:outline-none focus:border-[#ccc] border border-border placeholder:text-[#ccc] ${
             leftComponent ? "pl-9" : "pl-3"
           }`}
           {...props}

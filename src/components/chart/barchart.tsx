@@ -1,13 +1,12 @@
 "use client";
 import {
   BarChart,
-  Legend,
   Bar,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -41,28 +40,19 @@ const data = [
     Expenses: 4800,
     amt: 2181,
   },
-  {
-    name: "July",
-    Income: 2390,
-    Expenses: 3800,
-    amt: 2500,
-  },
 ];
 
 export const BarChartCom = () => {
-  // let demoUrl = "https://codesandbox.io/s/stacked-area-chart-ix341";
-
   return (
-    <div style={{ width: "100%", height: 250 }}>
+    <div style={{ width: "100%", height: 215 }}>
       <ResponsiveContainer>
         <BarChart width={250} height={250} data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
-          <Legend />
-          <Bar dataKey="Expenses" fill="#7DB4FE" />
-          <Bar dataKey="Income" fill="#F6A3C8" />
+          <Bar dataKey="Expenses" fill="#9c50a5" />
+          <Bar dataKey="Income" fill="#755cca" />
         </BarChart>
       </ResponsiveContainer>
     </div>
