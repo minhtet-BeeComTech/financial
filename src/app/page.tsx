@@ -675,64 +675,72 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-1/4">
-          <div className="bg-primary rounded-[6px] p-4 mb-4">
-            <div className="flex flex-row items-center justify-between mb-[30px]">
-              <div>
-                <span className="text-typo text-lg">My Cards</span>
+        <div className="w-full lg:w-1/4 flex flex-wrap lg:flex-col">
+          <div className="w-full md:w-1/2 lg:w-full">
+            <div className="bg-primary rounded-[6px] p-4 mb-4 mr-0 sm:mr-4 lg:mr-0">
+              <div className="flex flex-row items-center justify-between mb-[30px]">
+                <div>
+                  <span className="text-typo text-lg">My Cards</span>
+                </div>
+                <div className="cursor-pointer">
+                  <span className="text-typo-500 text-sm">add card +</span>
+                </div>
               </div>
-              <div className="cursor-pointer">
-                <span className="text-typo-500 text-sm">add card +</span>
-              </div>
-            </div>
-            <div className="relative ml-[20px]">
-              <div className="w-full">
-                <Image
-                  src={require("../../public/AYA_JCB_Debit.png")}
-                  className="w-full object-cover"
-                  alt="bank1"
-                  priority
-                  sizes="100vw"
-                  style={{
-                    width: "100%",
-                    height: "auto"
-                  }} />
-              </div>
-              <div className="absolute top-[-20px] left-[-20px] w-full h-[160px]">
-                <Image
-                  src={require("../../public/AYA_JCB_Debit.png")}
-                  className="w-full h-[160px] object-cover"
-                  alt="bank2"
-                  priority
-                  sizes="100vw"
-                  style={{
-                    width: "100%",
-                    height: "auto"
-                  }} />
+              <div className="relative ml-[20px]">
+                <div className="w-full">
+                  <Image
+                    src={require("../../public/AYA_JCB_Debit.png")}
+                    className="w-full object-cover"
+                    alt="bank1"
+                    priority
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                  />
+                </div>
+                <div className="absolute top-[-20px] left-[-20px] w-full h-[160px]">
+                  <Image
+                    src={require("../../public/AYA_JCB_Debit.png")}
+                    className="w-full h-[160px] object-cover"
+                    alt="bank2"
+                    priority
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <div className="bg-primary rounded-[6px] p-4 mb-4">
-            <div className="flex flex-row items-center justify-between mb-[15px]">
-              <div>
-                <span className="text-typo text-lg">Quick Transaction</span>
+          <div className="w-full md:w-1/2 lg:w-full">
+            <div className="bg-primary rounded-[6px] p-4 mb-4 mr-0 sm:mr-4 lg:mr-0">
+              <div className="flex flex-row items-center justify-between mb-[15px]">
+                <div>
+                  <span className="text-typo text-lg">Quick Transaction</span>
+                </div>
+                <div className="cursor-pointer">
+                  <span className="text-typo-500 text-sm">add +</span>
+                </div>
               </div>
-              <div className="cursor-pointer">
-                <span className="text-typo-500 text-sm">add +</span>
-              </div>
+              <QuickTransfer />
             </div>
-            <QuickTransfer />
           </div>
-          <div className="bg-primary rounded-[6px] p-4">
-            <div className="flex flex-row items-center justify-between">
-              <div>
-                <span className="text-typo text-lg">Goals</span>
+          <div className="w-full md:w-1/2 lg:w-full">
+            <div className="bg-primary rounded-[6px] p-4 mb-4 mr-0 sm:mr-4 lg:mr-0">
+              <div className="flex flex-row items-center justify-between">
+                <div>
+                  <span className="text-typo text-lg">Goals</span>
+                </div>
+                <div className="cursor-pointer">
+                  <span className="text-typo-500 text-sm">add goal +</span>
+                </div>
               </div>
-              <div className="cursor-pointer">
-                <span className="text-typo-500 text-sm">add goal +</span>
-              </div>
+              <Goals />
             </div>
-            <Goals />
           </div>
         </div>
       </div>
