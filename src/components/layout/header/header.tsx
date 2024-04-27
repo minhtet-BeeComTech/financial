@@ -1,7 +1,7 @@
 "use client";
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useRouter, usePathname } from "next/navigation";
 import { BsBell, BsSearch } from "react-icons/bs";
 import { AiOutlineMail, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
