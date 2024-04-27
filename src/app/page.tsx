@@ -1,6 +1,6 @@
 "use client";
 import React, { useMemo } from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import {
   BsArrowLeftRight,
   BsCarFront,
@@ -690,19 +690,25 @@ export default function Home() {
                 <Image
                   src={require("../../public/AYA_JCB_Debit.png")}
                   className="w-full object-cover"
-                  layout="responsive"
                   alt="bank1"
                   priority
-                />
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto"
+                  }} />
               </div>
               <div className="absolute top-[-20px] left-[-20px] w-full h-[160px]">
                 <Image
                   src={require("../../public/AYA_JCB_Debit.png")}
                   className="w-full h-[160px] object-cover"
-                  layout="responsive"
                   alt="bank2"
                   priority
-                />
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto"
+                  }} />
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 import { useCallback } from "react";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import {
   BsGrid,
@@ -108,12 +108,15 @@ export const SideBarCom = () => {
           <Image
             src={require("../../../../public/googlewallet.png")}
             className="w-full h-[47px] object-cover"
-            layout="responsive"
             width={47}
             height={47}
             alt="Avatar"
             priority
-          />
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto"
+            }} />
         </div>
         <h1 className="text-typo font-bold text-lg">Wallet</h1>
       </div>

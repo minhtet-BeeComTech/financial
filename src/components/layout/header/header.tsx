@@ -1,7 +1,7 @@
 "use client";
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { BsBell, BsSearch } from "react-icons/bs";
 import { AiOutlineMail, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
@@ -62,12 +62,15 @@ export const HeaderCom = () => {
                 <Image
                   src={require("../../../../public/avatar.png")}
                   className="w-full h-[56px] object-cover"
-                  layout="responsive"
                   width={56}
                   height={56}
                   alt="Avatar"
                   priority
-                />
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto"
+                  }} />
               </Link>
               <Link href="/account/profile">
                 <span className="text-typo text-[14px]">Hello, Michaela</span>
@@ -102,12 +105,15 @@ export const HeaderCom = () => {
                 <Image
                   src={require("../../../../public/avatar.png")}
                   className="w-full h-[30px] object-cover"
-                  layout="responsive"
                   width={30}
                   height={30}
                   alt="Avatar"
                   priority
-                />
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto"
+                  }} />
               </div>
             </Link>
             <Link
@@ -158,12 +164,15 @@ export const HeaderCom = () => {
                 <Image
                   src={require("../../../../public/googlewallet.png")}
                   className="w-full h-[47px] object-cover"
-                  layout="responsive"
                   width={47}
                   height={47}
                   alt="Avatar"
                   priority
-                />
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto"
+                  }} />
               </div>
               <h1 className="text-typo font-bold text-lg">Wallet</h1>
             </div>
