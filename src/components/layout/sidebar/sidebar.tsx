@@ -130,7 +130,7 @@ export const SideBarCom = () => {
                     key={index}
                     className={`${
                       pathName === item.path ? "bg-active-gradient" : ""
-                    }`}
+                    } hover:text-hover`}
                   >
                     {item.path === "/logout" ? (
                       <div
@@ -138,7 +138,7 @@ export const SideBarCom = () => {
                         className="flex items-center gap-x-2 cursor-pointer py-[10px] px-[20px]"
                       >
                         <div>{item.icon}</div>
-                        <span className="text-typo">{item.name}</span>
+                        <span className="text-typo label">{item.name}</span>
                       </div>
                     ) : (
                       <Link
@@ -148,7 +148,7 @@ export const SideBarCom = () => {
                         <div>{item.icon}</div>
                         <div className="flex w-full items-center justify-between">
                           <div className="flex">
-                            <span className="text-typo">{item.name}</span>
+                            <span className="text-typo label">{item.name}</span>
                           </div>
                           {item.count && (
                             <div className="flex items-start justify-center bg-[#9699F3] min-w-[18px] h-[18px] rounded-[18px]">
@@ -169,7 +169,7 @@ export const SideBarCom = () => {
       </nav>
       <div className="absolute bottom-0 bg-sidebar z-10 w-[16%]">
         <div
-          className="cursor-pointer py-[20px] px-[20px] pl-[45px] relative"
+          className="cursor-pointer py-[20px] px-[20px] pl-[45px] relative theme-text-hover"
           onClick={() => handleTheme(theme === "dark" ? "light" : "dark")}
         >
           <MdOutlineDarkMode
@@ -186,7 +186,7 @@ export const SideBarCom = () => {
                 : "opacity-0"
             }`}
           />
-          <span className="text-typo">
+          <span className="text-typo label">
             Switch to {theme === "dark" ? "light" : "dark"}
           </span>
         </div>

@@ -12,44 +12,44 @@ import {
 const data = [
   {
     name: "Jan",
-    uv: 4000,
-    pv: 2400,
+    2020: 4000,
+    2021: 2400,
     amt: 2400,
   },
   {
     name: "Feb",
-    uv: 3000,
-    pv: 1398,
+    2020: 3000,
+    2021: 1398,
     amt: 2210,
   },
   {
     name: "Mar",
-    uv: 2000,
-    pv: 9800,
+    2020: 2000,
+    2021: 9800,
     amt: 2290,
   },
   {
     name: "Apr",
-    uv: 2780,
-    pv: 3908,
+    2020: 2780,
+    2021: 3908,
     amt: 2000,
   },
   {
     name: "May",
-    uv: 1890,
-    pv: 4800,
+    2020: 1890,
+    2021: 4800,
     amt: 2181,
   },
   {
     name: "Jun",
-    uv: 2390,
-    pv: 3800,
+    2020: 2390,
+    2021: 3800,
     amt: 2500,
   },
   {
     name: "July",
-    uv: 3490,
-    pv: 4300,
+    2020: 3490,
+    2021: 4300,
     amt: 2100,
   },
 ];
@@ -81,14 +81,14 @@ export const StackedAreaChartCom = () => {
           <Tooltip />
           <Area
             type="monotone"
-            dataKey="uv"
+            dataKey="2020"
             stroke="#7DB4FE"
             fillOpacity={1}
             fill="url(#colorUv)"
           />
           <Area
             type="monotone"
-            dataKey="pv"
+            dataKey="2021"
             stroke="#F6A3C8"
             fillOpacity={1}
             fill="url(#colorPv)"

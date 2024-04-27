@@ -35,19 +35,28 @@ body {
   scrollbar-width: none;
 }
 
-.recharts-responsive-container {
-  .recharts-wrapper {
-    .recharts-surface {
-      .recharts-layer {
-        .recharts-cartesian-axis-ticks {
-          .recharts-layer {
-            .recharts-text {
-              fill: #999999;
-              font-size: 14px;
-            }
-          }
-        }
-      }
+.recharts-responsive-container .recharts-text {
+  fill: #999;
+  font-size: 14px;
+}
+
+ul li {
+  &:hover {
+    a,
+    svg,
+    .label {
+      color: #999;
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+.theme-text-hover {
+  &:hover {
+    svg,
+    .label {
+      color: #999;
+      transition: color 0.3s ease;
     }
   }
 }

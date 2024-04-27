@@ -18,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={jost.className}>
         <Providers>
           <main className="flex-1 overflow-y-auto p-4 px-4 lg:px-7 no-scrollbar">

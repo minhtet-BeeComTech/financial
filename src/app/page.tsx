@@ -450,6 +450,21 @@ const Goals = React.memo(() => {
 Goals.displayName = "Goals";
 
 export default function Home() {
+  const handleAmtFormat = (amt: number) => {
+    const formattedAmount = moneyFormat(amt);
+    const [integerPart, decimalPart] = formattedAmount.split(".");
+
+    return (
+      integerPart && (
+        <span className="text-typo font-semibold">
+          ${integerPart}
+          {decimalPart && (
+            <span className="text-typo text-[10px]">.{decimalPart}</span>
+          )}
+        </span>
+      )
+    );
+  };
   return (
     <div className="min-h-screen mb-4">
       <div className="block lg:hidden">
@@ -470,9 +485,7 @@ export default function Home() {
               <div className="bg-primary rounded-[6px] mb-4 mr-0 sm:mr-4 relative overflow-hidden">
                 <div className="absolute top-[60px] left-0 w-full">
                   <div className="flex flex-col gap-y-[40px] px-[18px]">
-                    <span className="text-typo font-semibold">
-                      ${moneyFormat(65587.67)}
-                    </span>
+                    {handleAmtFormat(65587.67)}
                     <span className="text-typo-600 text-sm">+16%</span>
                   </div>
                 </div>
@@ -494,9 +507,7 @@ export default function Home() {
               <div className="bg-primary rounded-[6px] mb-4 mr-0 sm:mr-4 relative overflow-hidden">
                 <div className="absolute top-[60px] left-0 w-full">
                   <div className="flex flex-col gap-y-[40px] px-[18px]">
-                    <span className="text-typo font-semibold">
-                      ${moneyFormat(1420.67)}
-                    </span>
+                    {handleAmtFormat(1420.67)}
                     <span className="text-typo-700 text-sm">-36%</span>
                   </div>
                 </div>
@@ -518,9 +529,7 @@ export default function Home() {
               <div className="bg-primary rounded-[6px] mb-4 mr-0 sm:mr-4 relative overflow-hidden">
                 <div className="absolute top-[60px] left-0 w-full">
                   <div className="flex flex-col gap-y-[40px] px-[18px]">
-                    <span className="text-typo font-semibold">
-                      ${moneyFormat(950.67)}
-                    </span>
+                    {handleAmtFormat(950.67)}
                     <span className="text-typo-600 text-sm">+12%</span>
                   </div>
                 </div>
