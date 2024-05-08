@@ -479,9 +479,9 @@ export default function Home() {
       </div>
       <div className="flex flex-wrap">
         <div className="w-full lg:w-3/4">
-          {/* section 1 */}
           <div className="flex flex-wrap">
-            <div className="w-full sm:w-1/2 lg:w-4/12">
+            {/* section 1 */}
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <div className="bg-primary rounded-[6px] mb-4 mr-0 sm:mr-4 relative overflow-hidden">
                 <div className="absolute top-[60px] left-0 w-full">
                   <div className="flex flex-col gap-y-[40px] px-[18px]">
@@ -503,7 +503,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-1/2 lg:w-4/12">
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <div className="bg-primary rounded-[6px] mb-4 mr-0 sm:mr-4 relative overflow-hidden">
                 <div className="absolute top-[60px] left-0 w-full">
                   <div className="flex flex-col gap-y-[40px] px-[18px]">
@@ -525,7 +525,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-1/2 lg:w-4/12">
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <div className="bg-primary rounded-[6px] mb-4 mr-0 sm:mr-4 relative overflow-hidden">
                 <div className="absolute top-[60px] left-0 w-full">
                   <div className="flex flex-col gap-y-[40px] px-[18px]">
@@ -547,10 +547,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* section 2 */}
-          <div className="flex flex-wrap">
+            {/* section 2 */}
             <div className="w-full sm:w-1/2 lg:w-8/12">
               <div className="bg-primary rounded-[6px] p-4 mb-4 mr-0 sm:mr-4">
                 <div className="flex flex-row items-center justify-between mb-[10px]">
@@ -599,11 +597,9 @@ export default function Home() {
                 <BarChartCom />
               </div>
             </div>
-          </div>
 
-          {/* section 3 */}
-          <div className="flex flex-wrap">
-            <div className="w-full sm:w-1/2 lg:w-4/12">
+            {/* section 3 */}
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <div className="bg-primary rounded-[6px] p-4 mb-4 mr-0 sm:mr-4">
                 <div className="flex flex-row items-center justify-between">
                   <div>
@@ -645,7 +641,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full sm:w-1/2 lg:w-4/12">
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <div className="bg-primary rounded-[6px] p-4 mb-4 mr-0 sm:mr-4">
                 <div className="flex flex-row items-center justify-between">
                   <div>
@@ -659,7 +655,7 @@ export default function Home() {
                 <Transactions transactions={transactions} />
               </div>
             </div>
-            <div className="w-full sm:w-1/2 lg:w-4/12">
+            <div className="w-full sm:w-1/2 lg:w-1/3">
               <div className="bg-primary rounded-[6px] p-4 mb-4 mr-0 sm:mr-4">
                 <div className="flex flex-row items-center justify-between">
                   <div>
